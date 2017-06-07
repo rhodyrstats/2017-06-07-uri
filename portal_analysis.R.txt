@@ -110,3 +110,5 @@ surveys_gw <- surveys %>%
   group_by(genus,plot_id) %>%
   summarise(meanweight = mean(weight))
 
+#convert to wide format
+library(tidyr)
