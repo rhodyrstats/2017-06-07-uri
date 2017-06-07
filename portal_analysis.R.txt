@@ -8,3 +8,9 @@ download.file("https://ndownloader.figshare.com/files/2292169",
 #assign to the surveys variable the data
 #read data with read.csv
 surveys <- read.csv('data/portal_data_joined.csv')
+head(surveys)
+
+#here's some information
+dim(surveys)
+
+
