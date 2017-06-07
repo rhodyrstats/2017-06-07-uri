@@ -97,5 +97,6 @@ levels(surveys$sex) <- c("missing","Female","Male")
 surveys$sex <- factor(surveys$sex,
                       levels=c("Female","Male","missing"))
 
-
-
+#Dates
+#install.packages('lubridate')
+library(lubridate)
