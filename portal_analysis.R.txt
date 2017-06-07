@@ -133,7 +133,9 @@ surveys_gw_long <- surveys_gw_wide %>%
 surveys_g <- surveys %>%
   group_by(plot_id,year) %>%
   summarise(ngen = n_distinct(genus))
-surveys_g_wide<-surveys_g %>% spread(year,ngen)
-
+surveys_g_wide<-surveys_g %>% 
+  spread(plot_id,ngen)
 
 #2. convert it back to long format
+surveys_g_long <- surveys_g_wide %>%
+  gather(plot_id,ngen,-year)
