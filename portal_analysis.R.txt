@@ -26,5 +26,6 @@ mean(surveys$weight, na.rm = TRUE)
 
 #get weight in kg
 #new column
-#
+#weight/1000
+surveys$weight_kg <- surveys$weight/1000
 
