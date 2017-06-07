@@ -32,4 +32,9 @@ surveys$weight_kg <- surveys$weight/1000
 #install.packages('dplyr') if needed
 library(dplyr)
 #calculate mean weight for each sex
-group_by(surveys,sex)
+#first group by category
+#then send to a command using a pipe %>%
+#summarise is the general command for summary stats
+
+group_by(surveys,sex) %>%
+  summarise()
