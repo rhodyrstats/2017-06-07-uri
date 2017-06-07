@@ -29,4 +29,6 @@ mean(surveys$weight, na.rm = TRUE)
 #weight/1000
 surveys$weight_kg <- surveys$weight/1000
 
+#install.packages('dplyr') if needed
+library(dplyr)
 
