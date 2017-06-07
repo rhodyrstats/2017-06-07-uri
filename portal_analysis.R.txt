@@ -53,3 +53,6 @@ survey_mweight3 <- surveys %>%
   group_by(sex,species_id) %>%
   summarise(mean_weight=mean(weight,na.rm=TRUE),
             max_weight=max(weight,na.rm=TRUE))
+
+#count number in each category
+surveys %>% group_by(sex) %>% tally
