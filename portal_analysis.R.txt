@@ -20,5 +20,9 @@ rownames(surveys)
 summary(surveys)
 
 #get mean weight
-#you need get the weight column
-surveys$weight
+#you need get the weight column then calc mean
+#get rid of NAs
+mean(surveys$weight, na.rm = TRUE)
+
+
+
