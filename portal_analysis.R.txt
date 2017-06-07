@@ -36,5 +36,5 @@ library(dplyr)
 #then send to a command using a pipe %>%
 #summarise is the general command for summary stats
 #
-group_by(surveys,sex) %>%
+survey_mweight <- group_by(surveys,sex) %>%
   summarise(mean_weight=mean(weight,na.rm=TRUE))
