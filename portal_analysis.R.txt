@@ -146,5 +146,21 @@ surveys_long <- surveys %>%
 #one measurement per row
 #each measurement has a value
 
-#calculate mean of each measurement for each year and plot
+#calculate mean of each measurement for each year and plot_id
+measurement_means<-surveys_long %>% filter(!is.na(value)) %>%
+  group_by(measurement,year,plot_id) %>%
+  summarise(m_val=mean(value))
+measurement_means %>% spread(measurement,m_val)
 
+#Writing out to csv
+#write data that's complete
+
+#filter missing data
+surveys_complete <- surveys %>%
+  filter(species_id != "",
+         !is.na(weight),
+         !is.na(hindfoot_length),
+         sex!="missing")
+
+write.csv(surveys_complete,file="data/surveys_complete.csv",
+          row.names = FALSE)
