@@ -1,2 +1,5 @@
+#download.file command
+#take address of the data
+#take destination locally
 download.file("https://ndownloader.figshare.com/files/2292169",
               "data/portal_data_joined.csv")
