@@ -9,8 +9,12 @@ download.file("https://ndownloader.figshare.com/files/2292169",
 #read data with read.csv
 surveys <- read.csv('data/portal_data_joined.csv')
 head(surveys)
+tail(surveys)
 
 #here's some information
 dim(surveys)
-
-
+nrow(surveys)
+ncol(surveys)
+colnames(surveys)
+rownames(surveys)
+summary(surveys)
