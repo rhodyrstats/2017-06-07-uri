@@ -146,4 +146,5 @@ surveys_long <- surveys %>%
 #one measurement per row
 #each measurement has a value
 
+#calculate mean of each measurement for each year and plot
 
