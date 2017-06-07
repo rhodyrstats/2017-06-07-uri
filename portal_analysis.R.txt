@@ -119,3 +119,12 @@ surveys_gw_long <- surveys_gw_wide %>%
   gather(genus,mean_weight,-plot_id) %>%
   filter(mean_weight >0)
 #filter out 0 or NA
+
+##Challenge
+#1. Make a wide frame with plot_id
+#(rows), year (cols), values = number
+#of genera
+#hint: n_distinct gives the number
+#of unique types
+
+#2. convert it back to long format
