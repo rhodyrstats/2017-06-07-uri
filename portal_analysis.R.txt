@@ -31,4 +31,5 @@ surveys$weight_kg <- surveys$weight/1000
 
 #install.packages('dplyr') if needed
 library(dplyr)
-
+#calculate mean weight for each sex
+group_by(surveys,sex)
