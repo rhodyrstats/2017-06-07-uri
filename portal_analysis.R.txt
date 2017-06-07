@@ -18,3 +18,7 @@ ncol(surveys)
 colnames(surveys)
 rownames(surveys)
 summary(surveys)
+
+#get mean weight
+#you need get the weight column
+surveys$weight
