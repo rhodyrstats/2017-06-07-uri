@@ -103,3 +103,7 @@ library(lubridate)
 surveys$date<-ymd(paste(surveys$year,surveys$month,surveys$day, sep="-"))
 surveys[is.na(surveys$date),2:4]
 
+#Challenge
+#calculate mean weight by genus/plot_id
+
+
