@@ -129,4 +129,11 @@ surveys_gw_long <- surveys_gw_wide %>%
 #hint: n_distinct gives the number
 #of unique types
 
+#get number of genera for plot_id/year
+surveys_g <- surveys %>%
+  group_by(plot_id,year) %>%
+  summarise(ngen = n_distinct(genus))
+surveys_g_wide<-surveys_g %>% spread(year,ngen)
+
+
 #2. convert it back to long format
