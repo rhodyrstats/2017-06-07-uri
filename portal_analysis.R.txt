@@ -2,5 +2,6 @@
 #takes address of the data
 #takes destination locally
 #click Run to make this run
+#don't forget to make a folder for data
 download.file("https://ndownloader.figshare.com/files/2292169",
               "data/portal_data_joined.csv")
