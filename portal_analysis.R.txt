@@ -100,3 +100,6 @@ surveys$sex <- factor(surveys$sex,
 #Dates
 #install.packages('lubridate')
 library(lubridate)
+surveys$date<-ymd(paste(surveys$year,surveys$month,surveys$day, sep="-"))
+surveys[is.na(surveys$date),2:4]
+
