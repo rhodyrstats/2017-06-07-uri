@@ -35,6 +35,12 @@ library(dplyr)
 #first group by category
 #then send to a command using a pipe %>%
 #summarise is the general command for summary stats
-#
+
+#this is one example of split-apply-combine
 survey_mweight <- group_by(surveys,sex) %>%
   summarise(mean_weight=mean(weight,na.rm=TRUE))
+
+survey_mweight2 <- surveys %>% 
+  group_by(sex,species_id) %>%
+  summarise(mean_weight=mean(weight,na.rm=TRUE))
+
