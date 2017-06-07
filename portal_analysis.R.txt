@@ -61,3 +61,8 @@ surveys %>% group_by(sex) %>% tally
 #1. How many individuals were caught in 
 #each plot type?
 
+#2. What are the mean, min, and max hindfoot
+#lengths for each species?
+
+#3. What was the heaviest animal each year?
+#Give the year, genus, species, and weight
