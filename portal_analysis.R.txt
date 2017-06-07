@@ -139,3 +139,4 @@ surveys_g_wide<-surveys_g %>%
 #2. convert it back to long format
 surveys_g_long <- surveys_g_wide %>%
   gather(plot_id,ngen,-year)
+
