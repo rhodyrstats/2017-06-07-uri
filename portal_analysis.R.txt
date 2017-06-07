@@ -65,5 +65,12 @@ surveys %>% group_by(plot_type) %>% tally
 #2. What are the mean, min, and max hindfoot
 #lengths for each species?
 
+ch2 <- surveys %>%
+  filter(!is.na(hindfoot_length)) %>%
+  group_by(species_id) %>%
+  summarise(mean_hindfoot=mean(hindfoot_length, na.rm = TRUE),
+            max_hindfoot=max(hindfoot_length, na.rm = TRUE),
+            min_hindfoot=min(hindfoot_length, na.rm = TRUE))
+
 #3. What was the heaviest animal each year?
 #Give the year, genus, species, and weight
