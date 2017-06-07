@@ -114,3 +114,8 @@ surveys_gw <- surveys %>%
 library(tidyr)
 surveys_gw_wide <- surveys_gw %>%
   spread(genus,meanweight,fill=0)
+
+surveys_gw_long <- surveys_gw_wide %>%
+  gather(genus,mean_weight,-plot_id) %>%
+  filter(mean_weight >0)
+#filter out 0 or NA
