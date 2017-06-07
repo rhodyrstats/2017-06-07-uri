@@ -140,3 +140,6 @@ surveys_g_wide<-surveys_g %>%
 surveys_g_long <- surveys_g_wide %>%
   gather(plot_id,ngen,-year)
 
+#use gather to make a long dataset
+surveys_long <- surveys %>%
+  gather(measurement, value,hindfoot_length:weight)
