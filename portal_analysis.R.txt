@@ -74,3 +74,8 @@ ch2 <- surveys %>%
 
 #3. What was the heaviest animal each year?
 #Give the year, genus, species, and weight
+
+surveys_heavy <- surveys %>%
+  filter(!is.na(weight)) %>%
+  group_by(year,genus,species_id) %>%
+  summarise(max_weight=max(weight))    
