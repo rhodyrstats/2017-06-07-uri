@@ -112,3 +112,5 @@ surveys_gw <- surveys %>%
 
 #convert to wide format
 library(tidyr)
+surveys_gw_wide <- surveys_gw %>%
+  spread(genus,meanweight,fill=0)
