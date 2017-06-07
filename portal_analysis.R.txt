@@ -60,6 +60,7 @@ surveys %>% group_by(sex) %>% tally
 #**Challenge**
 #1. How many individuals were caught in 
 #each plot type?
+surveys %>% group_by(plot_type) %>% tally
 
 #2. What are the mean, min, and max hindfoot
 #lengths for each species?
