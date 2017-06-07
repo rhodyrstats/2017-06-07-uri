@@ -105,5 +105,8 @@ surveys[is.na(surveys$date),2:4]
 
 #Challenge
 #calculate mean weight by genus/plot_id
-
+surveys_gw <- surveys %>%
+  filter(!is.na(weight)) %>%
+  group_by(genus,plot_id) %>%
+  summarise(meanweight = mean(weight))
 
