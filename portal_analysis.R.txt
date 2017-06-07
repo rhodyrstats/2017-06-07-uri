@@ -56,3 +56,8 @@ survey_mweight3 <- surveys %>%
 
 #count number in each category
 surveys %>% group_by(sex) %>% tally
+
+#**Challenge**
+#1. How many individuals were caught in 
+#each plot type?
+
