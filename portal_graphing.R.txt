@@ -5,9 +5,10 @@ surveys <- read.csv('data/portal_data_joined.csv')
 #reassign factors for sex
 levels(surveys$sex)[1]<-"missing"
 
+filter_common <- function(surveydata){
 #filter missing data - make sure factors are 
 #reassigned
-surveys_complete <- surveys %>%
+surveys_complete <- surveydata %>%
   filter(species_id != "",
          !is.na(weight),
          !is.na(hindfoot_length),
@@ -24,6 +25,10 @@ species_common <- species_counts %>% filter(n>=50)
 #filter our surveys by list of common species
 surveys_complete_common <- surveys_complete %>%
   filter(species_id %in% species_common$species_id)
+
+return(surveys_complete_common)
+}
+
 
 ##PLOTS
 #Is hindfoot length correlated with weight?
@@ -119,3 +124,9 @@ ggplot(surveys_complete_common,aes(x=weight))+
 
 ggplot(surveys_complete_common,aes(x=species_id,y=weight,color=sex))+
   geom_violin()
+
+
+###########
+#Filter our data for common species
+#Plots
+
