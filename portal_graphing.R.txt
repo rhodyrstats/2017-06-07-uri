@@ -71,5 +71,14 @@ ggplot(data=surveys_complete_common,aes(x=species_id,y=hindfoot_length))+
 yearly_counts <- surveys_complete_common %>% group_by(year,species_id) %>%
   tally
 #plot counts as a function of year
-ggplot(yearly_counts, aes(x=year,y=n))+
+ggplot(yearly_counts, aes(x=year,y=n,color=species_id))+
   geom_point()+geom_line()
+
+#count the number of each species/sex per year
+yearly_counts <- surveys_complete_common %>% group_by(year,sex,species_id) %>%
+  tally
+#plots: each plot contains one species (two lines for sexes)
+#each contains one sex (lines for dif species)
+ggplot(yearly_counts, aes(x=year,y=n,color=sex))+
+  geom_point()+geom_line()+
+  facet_wrap(~species_id)
