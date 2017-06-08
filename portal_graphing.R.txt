@@ -62,6 +62,8 @@ ggplot(data=surveys_complete_common,aes(x=species_id,y=hindfoot_length,color=plo
 #put up green sticky
 #3. Color plot_id using discrete colors rather than a scale
 #hint: change plot_id from int to factor
-
+surveys_complete_common$plot_id <- factor(surveys_complete_common$plot_id)
+ggplot(data=surveys_complete_common,aes(x=species_id,y=hindfoot_length))+
+  geom_boxplot()+geom_point(alpha=.3,aes(color=plot_id))
 #Next Challenge
 #count the number of each species per year (no graph)
