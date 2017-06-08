@@ -49,3 +49,8 @@ base_plot+geom_point(alpha = .1, aes(color=species_id,shape=species_id))+
 p<-ggplot(data=surveys_complete_common, aes(x=species_id,y=weight))
 p+geom_boxplot()+geom_jitter(alpha=.3,color="tomato")
 p+geom_violin()
+
+ggplot(surveys_complete_common,aes(x=weight))+geom_histogram()
+
+#Challenge
+#Create a boxplot for hindfoot_length for each species
