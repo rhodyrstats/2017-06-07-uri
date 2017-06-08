@@ -54,3 +54,4 @@ ggplot(surveys_complete_common,aes(x=weight))+geom_histogram()
 
 #Challenge
 #Create a boxplot for hindfoot_length for each species
+#Color points based on plot_id
