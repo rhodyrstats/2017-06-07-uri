@@ -82,11 +82,19 @@ ggplot(yearly_counts, aes(x=year,y=n,color=sex))+
   geom_point()+geom_line()+
   facet_wrap(~species_id,ncol=2)
 
+ggplot(yearly_counts, aes(x=year,y=n,color=sex))+
+  geom_point()+geom_line()+
+  facet_wrap(~species_id)
+
 #Challenge
 #each plot contains one sex (color lines for dif species)
+grey_theme <-theme(axis.text.x = element_text(color="grey20",size=12,angle=90),
+                   panel.grid.minor=element_blank())
+
 ggplot(yearly_counts,aes(x=year,y=n,color=species_id))+
   geom_point()+geom_line()+facet_wrap(~sex)+theme_bw()+
   labs(title = 'Observed species over time',
        x = 'Year of observation',
-       y = 'Number of species')
+       y = 'Number of species')+
+  grey_theme
 
