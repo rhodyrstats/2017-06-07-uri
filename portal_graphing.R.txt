@@ -17,7 +17,8 @@ species_counts <-surveys_complete %>%
   group_by(species_id) %>%
   tally
 
-species_common <-surveys_complete %>%
-  group_by(species_id) %>%
-  tally %>% filter(n>=50)
+species_common <- species_counts %>% filter(n>=50)
+
+surveys_complete_common <- surveys_complete %>%
+  filter(species_id %in% species_common$species_id)
 
