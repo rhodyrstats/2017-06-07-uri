@@ -25,4 +25,8 @@ species_common <- species_counts %>% filter(n>=50)
 surveys_complete_common <- surveys_complete %>%
   filter(species_id %in% species_common$species_id)
 
+##PLOTS
+#Is hindfoot length correlated with weight?
+ggplot(data = surveys_complete_common,
+       aes(x=weight, y=hindfoot_length))
 
