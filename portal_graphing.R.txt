@@ -38,4 +38,6 @@ base_plot+geom_point(alpha = .1, aes(color=species_id))+
   scale_x_log10()
 #add fitted line
 base_plot+geom_point(alpha = .1, aes(color=species_id))+
-  scale_x_log10()+geom_smooth(method='lm', aes(color=species_id))
+  scale_x_log10()+
+  geom_smooth(data=filter(surveys_complete_common,species_id =="PM"),method='lm', aes(color=species_id))
+
