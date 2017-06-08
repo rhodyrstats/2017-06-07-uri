@@ -10,3 +10,9 @@ surveys_complete <- surveys %>%
          !is.na(weight),
          !is.na(hindfoot_length),
          sex!="missing")
+
+#extract the common species (by id)
+#what are the common species?
+species_counts <-surveys_complete %>%
+  group_by(species_id) %>%
+  tally
