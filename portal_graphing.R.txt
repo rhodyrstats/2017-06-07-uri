@@ -3,7 +3,7 @@ library(tidyverse)
 
 #############################
 
-filter_common <- function(surveydata){
+filter_common <- function(surveydata,common){
 #filter missing data - make sure factors are 
 #reassigned
 surveys_complete <- surveydata %>%
@@ -18,7 +18,7 @@ species_counts <-surveys_complete %>%
   group_by(species_id) %>%
   tally
 
-species_common <- species_counts %>% filter(n>=50)
+species_common <- species_counts %>% filter(n>=common)
 
 #filter our surveys by list of common species
 surveys_complete_common <- surveys_complete %>%
@@ -31,6 +31,8 @@ surveys <- read.csv('data/portal_data_joined.csv')
 
 #reassign factors for sex
 levels(surveys$sex)[1]<-"missing"
+
+surveys_complete_common<-filter_common(surveys,2000)
 
 ##PLOTS
 #Is hindfoot length correlated with weight?
