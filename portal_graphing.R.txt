@@ -19,6 +19,7 @@ species_counts <-surveys_complete %>%
 
 species_common <- species_counts %>% filter(n>=50)
 
+#filter our surveys by list of common species
 surveys_complete_common <- surveys_complete %>%
   filter(species_id %in% species_common$species_id)
 
