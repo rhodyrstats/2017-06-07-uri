@@ -32,4 +32,4 @@ ggplot(data = surveys_complete_common, aes(x=weight, y=hindfoot_length))+
 
 #are species different
 base_plot <- ggplot(data = surveys_complete_common, aes(x=weight, y=hindfoot_length))
-base_plot+geom_point(color=species_id)
+base_plot+geom_point(alpha = .1, aes(color=species_id))
