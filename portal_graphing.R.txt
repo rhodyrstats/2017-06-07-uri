@@ -44,3 +44,8 @@ base_plot+geom_point(alpha = .1, aes(color=species_id))+
 base_plot+geom_point(alpha = .1, aes(color=species_id,shape=species_id))+
   scale_x_log10()+
   geom_smooth(method='lm', aes(color=species_id,shape=species_id))
+
+#What is the distribution of weight within each species?
+p<-ggplot(data=surveys_complete_common, aes(x=species_id,y=weight))
+p+geom_boxplot()+geom_jitter(alpha=.3,color="tomato")
+p+geom_violin()
