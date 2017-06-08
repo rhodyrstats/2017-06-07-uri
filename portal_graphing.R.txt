@@ -27,6 +27,6 @@ surveys_complete_common <- surveys_complete %>%
 
 ##PLOTS
 #Is hindfoot length correlated with weight?
-ggplot(data = surveys_complete_common,
-       aes(x=weight, y=hindfoot_length))
+ggplot(data = surveys_complete_common, aes(x=weight, y=hindfoot_length))+
+  geom_point()
 
