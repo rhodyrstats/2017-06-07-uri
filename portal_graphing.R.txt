@@ -80,7 +80,10 @@ yearly_counts <- surveys_complete_common %>% group_by(year,sex,species_id) %>%
 #plots: each plot contains one species (two lines for sexes)
 ggplot(yearly_counts, aes(x=year,y=n,color=sex))+
   geom_point()+geom_line()+
-  facet_wrap(~species_id)
+  facet_wrap(~species_id,ncol=2)
 
 #Challenge
-#each contains one sex (color lines for dif species)
+#each plot contains one sex (color lines for dif species)
+ggplot(yearly_counts,aes(x=year,y=n,color=species_id))+
+  geom_point()+geom_line()+facet_wrap(~sex)+theme_bw()
+
