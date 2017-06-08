@@ -68,3 +68,8 @@ ggplot(data=surveys_complete_common,aes(x=species_id,y=hindfoot_length))+
 
 #Next Challenge
 #count the number of each species per year (no graph)
+yearly_counts <- surveys_complete_common %>% group_by(year,species_id) %>%
+  tally
+#plot counts as a function of year
+ggplot(yearly_counts, aes(x=year,y=n))+
+  geom_point()+geom_line()
