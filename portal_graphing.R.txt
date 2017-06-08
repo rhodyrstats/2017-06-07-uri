@@ -1,0 +1,12 @@
+surveys <- read.csv('data/portal_data_joined.csv')
+
+#reassign factors for sex
+
+
+#filter missing data - make sure factors are 
+#reassigned
+surveys_complete <- surveys %>%
+  filter(species_id != "",
+         !is.na(weight),
+         !is.na(hindfoot_length),
+         sex!="missing")
