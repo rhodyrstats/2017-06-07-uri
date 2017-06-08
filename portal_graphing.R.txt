@@ -103,3 +103,5 @@ yearly_weight <- surveys_complete_common %>%
   group_by(year,species_id) %>%
   summarise(mweight = mean(weight))
 
+ggplot(yearly_weight,aes(x=year,y=mweight,color=species_id))+
+  geom_point()+geom_line()
