@@ -82,4 +82,5 @@ ggplot(yearly_counts, aes(x=year,y=n,color=sex))+
   geom_point()+geom_line()+
   facet_wrap(~species_id)
 
+#Challenge
 #each contains one sex (color lines for dif species)
