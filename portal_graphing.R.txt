@@ -1,4 +1,5 @@
 library(tidyverse)
+#install.packages('tidyverse')
 surveys <- read.csv('data/portal_data_joined.csv')
 
 #reassign factors for sex
