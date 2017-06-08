@@ -53,7 +53,11 @@ p+geom_violin()
 ggplot(surveys_complete_common,aes(x=weight))+geom_histogram()
 
 #Challenge
-#Create a boxplot for hindfoot_length for each species
-#Color points based on plot_id
-#Color plot_id using discrete colors rather than a scale
+#1. Create a boxplot for hindfoot_length for each species
+#2. Color points based on plot_id
+#put up green sticky
+#3. Color plot_id using discrete colors rather than a scale
 #hint: change plot_id from int to factor
+
+#Next Challenge
+#count the number of each species per year (no graph)
