@@ -28,11 +28,15 @@ return(surveys_complete_common)
 }
 ######################
 surveys <- read.csv('data/portal_data_joined.csv')
-
 #reassign factors for sex
 levels(surveys$sex)[1]<-"missing"
 
+#filter like this
 surveys_complete_common<-filter_common(surveys,2000)
+#run some stuff
+
+#filter some other way
+#run more stuff
 
 ##PLOTS
 #Is hindfoot length correlated with weight?
